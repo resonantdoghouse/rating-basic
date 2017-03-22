@@ -1,0 +1,6 @@
+.bcw-star-rating .fa-star {
+  color: grey;
+  transition: .5s; }
+  .bcw-star-rating .fa-star.active, .bcw-star-rating .fa-star.hover, .bcw-star-rating .fa-star:hover {
+    cursor: pointer;
+    color: #ffcc00; }

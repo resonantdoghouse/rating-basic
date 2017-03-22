@@ -1,0 +1,16 @@
+$defaultColor: grey;
+$activeColor: #ffcc00;
+
+.bcw-star-rating {
+
+  .fa-star {
+    color: $defaultColor;
+    transition: .5s;
+    &.active, &.hover, &:hover {
+      cursor: pointer;
+      color: $activeColor;
+    }
+  }
+
+
+}
