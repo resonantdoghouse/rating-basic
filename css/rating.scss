@@ -1,16 +1,29 @@
-$defaultColor: grey;
+$defaultColor: #D2D2D4;
 $activeColor: #ffcc00;
 
-.bcw-star-rating {
+.activeStar {
+  cursor: pointer;
+  color: $activeColor;
+}
 
-  .fa-star {
-    color: $defaultColor;
-    transition: .5s;
-    &.active, &.hover, &:hover {
-      cursor: pointer;
-      color: $activeColor;
+.container {
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.bcw-star-rating {
+  margin: 1em 0;
+  .stars {
+    .star-label {
+      input { display: none; }
+      .fa-star {
+        font-size: 1.5em;
+        color: $defaultColor;
+        transition: .5s;
+      }
+      &.active, &.hover, &:hover {
+        .fa-star { @extend .activeStar; }
+      }
     }
   }
-
-
 }

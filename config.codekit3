@@ -32,6 +32,12 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/email.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/email.php",
+		"oF": 0
+		},
 	"\/index.php": {
 		"ft": 8192,
 		"oA": 2,

@@ -1,6 +1,16 @@
-.bcw-star-rating .fa-star {
-  color: grey;
-  transition: .5s; }
-  .bcw-star-rating .fa-star.active, .bcw-star-rating .fa-star.hover, .bcw-star-rating .fa-star:hover {
-    cursor: pointer;
-    color: #ffcc00; }
+.activeStar, .bcw-star-rating .stars .star-label.active .fa-star, .bcw-star-rating .stars .star-label.hover .fa-star, .bcw-star-rating .stars .star-label:hover .fa-star {
+  cursor: pointer;
+  color: #ffcc00; }
+
+.container {
+  max-width: 600px;
+  margin-top: 20px; }
+
+.bcw-star-rating {
+  margin: 1em 0; }
+  .bcw-star-rating .stars .star-label input {
+    display: none; }
+  .bcw-star-rating .stars .star-label .fa-star {
+    font-size: 1.5em;
+    color: #D2D2D4;
+    transition: .5s; }

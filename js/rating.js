@@ -1,22 +1,38 @@
 
 // Hover state highlighting
-$('.bcw-star-rating .fa-star').hover(
+$('.bcw-star-rating .star-label').hover(
   function(){
-    $('.bcw-star-rating .fa-star').removeClass('hover');
-    $(this).prevAll('.fa-star').addBack().addClass('hover');
+    $('.bcw-star-rating .star-label').removeClass('hover');
+    $(this).prevAll('.star-label').addBack().addClass('hover');
   },
   function(){
-    $('.bcw-star-rating .fa-star').removeClass('hover');
+    $('.bcw-star-rating .star-label').removeClass('hover');
   }
 );
 
 // Active state when star clicked
-$('.bcw-star-rating .fa-star').click(function () {
-    $('.bcw-star-rating .fa-star').removeClass('active');
-    $(this).prevAll('.fa-star').addBack().addClass('active');
+$('.bcw-star-rating .star-label').click(function () {
+    $('.bcw-star-rating .star-label').removeClass('active');
+    $(this).prevAll('.star-label').addBack().addClass('active');
 
-    var rating = $(this).attr( "data-rating" );
+    rating = $('input', this).val();
 
     console.log(rating);
 });
+
+
+$("input[type='text'], textarea").on("keyup", function(){
+    if($(this).val() != "" && $("textarea").val() != "" && $("input[name='rating']").is(":checked") == true){
+        $("button[type='submit']").removeAttr("disabled");
+    }
+});
+
+$("input[name='rating']").on("change", function(){
+    if($(this).val() != "" && $("textarea").val() != "" && $("input[name='rating']").is(":checked") == true){
+        $("button[type='submit']").removeAttr("disabled");
+    }
+});
+
+console.log('updated 2');
+
 
